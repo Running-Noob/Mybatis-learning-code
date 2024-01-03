@@ -35,28 +35,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Running Noob/Code Project/Mybatis-learning-code/mybatis-002-crud/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Running Noob/Code Project/Mybatis-learning-code/mybatis-003-configuration/src/main/java/com/f/mybatis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-003-configuration\src\main\java\com\f\mybatis" />
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-003-configuration\src\main\resources" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-002-crud\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -66,8 +68,8 @@
       <recent name="com.f.mybatis.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CarMapperTest.testUpdateCar">
-    <configuration name="CarMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConfigurationTest">
+    <configuration name="CarMapperTest.testSelectCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis-002-crud" />
       <extension name="coverage">
         <pattern>
@@ -77,28 +79,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
       <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarMapperTest.testDeleteCarByNum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis-002-crud" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.f.mybatis.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
-      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
-      <option name="METHOD_NAME" value="testDeleteCarByNum" />
+      <option name="METHOD_NAME" value="testSelectCar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CarMapperTest.testInsertCar (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarMapperTest.testSelectCarById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis-002-crud" />
       <extension name="coverage">
         <pattern>
@@ -108,13 +95,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
       <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
-      <option name="METHOD_NAME" value="testInsertCar" />
+      <option name="METHOD_NAME" value="testSelectCarById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CarMapperTest.testInsertCarByPojo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarMapperTest.testSelectCarById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis-002-crud" />
       <extension name="coverage">
         <pattern>
@@ -124,7 +111,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
       <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
-      <option name="METHOD_NAME" value="testInsertCarByPojo" />
+      <option name="METHOD_NAME" value="testSelectCarById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,13 +133,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConfigurationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-003-configuration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.ConfigurationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigurationTest.testEnvironment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-003-configuration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.ConfigurationTest" />
+      <option name="METHOD_NAME" value="testEnvironment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CarMapperTest.testUpdateCar" />
-        <item itemvalue="JUnit.CarMapperTest.testDeleteCarByNum" />
-        <item itemvalue="JUnit.CarMapperTest.testInsertCarByPojo" />
-        <item itemvalue="JUnit.CarMapperTest.testInsertCar (1)" />
-        <item itemvalue="JUnit.CarMapperTest" />
+        <item itemvalue="JUnit.ConfigurationTest" />
+        <item itemvalue="JUnit.ConfigurationTest.testEnvironment" />
+        <item itemvalue="JUnit.CarMapperTest.testSelectCar" />
+        <item itemvalue="JUnit.CarMapperTest.testSelectCarById" />
+        <item itemvalue="JUnit.CarMapperTest.testSelectCarById" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +187,13 @@
       <workItem from="1703860243502" duration="217000" />
       <workItem from="1703903793729" duration="5937000" />
       <workItem from="1703912324205" duration="15000" />
-      <workItem from="1704027414738" duration="6869000" />
+      <workItem from="1704027414738" duration="7037000" />
+      <workItem from="1704084492754" duration="3207000" />
+      <workItem from="1704094463525" duration="32000" />
+      <workItem from="1704175103898" duration="448000" />
+      <workItem from="1704175682424" duration="598000" />
+      <workItem from="1704178619564" duration="8820000" />
+      <workItem from="1704256322992" duration="730000" />
     </task>
     <servers />
   </component>

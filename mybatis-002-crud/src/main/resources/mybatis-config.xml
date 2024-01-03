@@ -20,6 +20,7 @@
         <!-- 执行XxxMapper.xml文件的路径 -->
         <!-- resource属性自动会从类的根路径下开始查找资源 -->
         <mapper resource="CarMapper.xml"/>
+        <mapper resource="CarMapper2.xml"/>
     </mappers>
 
 </configuration>
