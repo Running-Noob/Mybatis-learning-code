@@ -2,7 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="account">
+<!--要想使用这种机制，namespace必须是dao接口的全限定名称-->
+<mapper namespace="com.f.bank.dao.AccountDao">
+    <!--要想使用这种机制，id必须是dao接口中的方法名-->
     <select id="selectByActno" resultType="com.f.bank.pojo.Account">
         SELECT * FROM t_act WHERE actno = #{actno}
     </select>

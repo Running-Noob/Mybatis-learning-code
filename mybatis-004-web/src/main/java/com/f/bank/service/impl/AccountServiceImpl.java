@@ -6,6 +6,7 @@ import com.f.bank.exceptions.MoneyNotEnoughException;
 import com.f.bank.exceptions.TransferException;
 import com.f.bank.pojo.Account;
 import com.f.bank.service.AccountService;
+import com.f.bank.utils.GenerateDaoProxy;
 import com.f.bank.utils.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -14,7 +15,12 @@ import org.apache.ibatis.session.SqlSession;
  * @date 2024/1/6 11:36
  */
 public class AccountServiceImpl implements AccountService {
-    private AccountDao accountDao = new AccountDaoImpl();
+    //private AccountDao accountDao = new AccountDaoImpl();
+    // 使用GenerateDaoProxy得到动态生成类的实例对象
+    //private AccountDao accountDao = (AccountDao) GenerateDaoProxy.generate(SqlSessionUtil.openSession(), AccountDao.class);
+    // 在mybatis当中，提供了相关的机制。也可以动态为我们生成dao接口的实现类（代理类：dao接口的代理）
+    // mybatis当中实际上采用了代理模式。在内存中生成dao接口的代理类，然后创建代理类的实例。
+    private AccountDao accountDao = SqlSessionUtil.openSession().getMapper(AccountDao.class);
 
     @Override
     public void transfer(String fromActno, String toActno, double money) throws MoneyNotEnoughException, TransferException {
