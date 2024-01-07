@@ -19,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -58,7 +58,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Running Noob/Code Project/Mybatis-learning-code",
+    "last_opened_file_path": "C:/Users/Running Noob/Code Project/Mybatis-learning-code/mybatis-005-interface-crud/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,11 +73,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-005-interface-crud\src\main\resources" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-004-web\src\main\resources" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\godbatis-test\src\main\resources" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\godbatis\src\main\resources" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-003-configuration\src\main\java\com\f\mybatis" />
-      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-003-configuration\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Running Noob\Code Project\mybatis_learning_code\mybatis-001-introduction\src\main\resources\x\y" />
@@ -86,11 +86,92 @@
       <recent name="org.god.ibatis.pojo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.f.bank.utils" />
+      <recent name="com.f.mybatis.pojo" />
       <recent name="com.f.mybatis.utils" />
+      <recent name="com.f.bank.utils" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CarMapperTest.testSelectAll">
+    <configuration name="CarMapperTest.testDeleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-005-interface-crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
+      <option name="METHOD_NAME" value="testDeleteById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarMapperTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-005-interface-crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarMapperTest.testSelectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-005-interface-crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
+      <option name="METHOD_NAME" value="testSelectAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarMapperTest.testSelectById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-005-interface-crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
+      <option name="METHOD_NAME" value="testSelectById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarMapperTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-005-interface-crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.1.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.15" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -179,6 +260,15 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CarMapperTest.testSelectAll" />
+        <item itemvalue="JUnit.CarMapperTest.testSelectById" />
+        <item itemvalue="JUnit.CarMapperTest.testUpdate" />
+        <item itemvalue="JUnit.CarMapperTest.testDeleteById" />
+        <item itemvalue="JUnit.CarMapperTest.testInsert" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -206,6 +296,7 @@
       <workItem from="1704524838146" duration="34000" />
       <workItem from="1704541786138" duration="14000" />
       <workItem from="1704544361476" duration="7579000" />
+      <workItem from="1704596043264" duration="4308000" />
     </task>
     <servers />
   </component>

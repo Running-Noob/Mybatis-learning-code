@@ -9,6 +9,7 @@
         <module name="mybatis-004-web" />
         <module name="godbatis" />
         <module name="mybatis-001-introduction" />
+        <module name="mybatis-005-interface-crud" />
         <module name="mybatis-002-crud" />
         <module name="mybatis-003-configuration" />
         <module name="godbatis-test" />
