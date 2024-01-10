@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <!--起别名-->
+    <typeAliases>
+        <!--type：指定给哪个类型起别名-->
+        <!--alias：指定别名-->
+        <!--<typeAlias type="com.f.mybatis.pojo.Car" alias="car"/>-->
+        <!--使用默认的别名，默认的别名就是类的简名-->
+        <!--<typeAlias type="com.f.mybatis.pojo.Car"/>-->
+        <!--包下所有的类自动起别名。使用简名作为别名。-->
+        <package name="com.f.mybatis.pojo"/>
+    </typeAliases>
+    <environments default="mybatisDB">
+        <environment id="mybatisDB">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--<mapper class="com.f.mybatis.mapper.CarMapper"/>-->
+        <!--这种方式在实际开发中是使用的-->
+        <!--前提：XML必须和接口放在同级目录下，并且名字一致-->
+        <package name="com.f.mybatis.mapper"/>
+    </mappers>
+</configuration>

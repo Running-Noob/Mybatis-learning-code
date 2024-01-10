@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.f.mybatis.mapper.CarMapper">
+    <select id="selectByCarType" resultType="car">
+        SELECT id,
+               car_num      AS carNum,
+               brand,
+               guide_price  AS guidePrice,
+               produce_time AS produceTime,
+               car_type     AS carType
+        FROM t_car
+        WHERE car_type = #{carType}
+    </select>
+</mapper>

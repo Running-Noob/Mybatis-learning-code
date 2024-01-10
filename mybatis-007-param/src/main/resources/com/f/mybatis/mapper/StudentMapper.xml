@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.f.mybatis.mapper.StudentMapper">
+    <select id="selectById" resultType="Student">
+        SELECT * FROM t_student WHERE id = #{id}
+    </select>
+    <select id="selectByName" resultType="Student">
+        SELECT * FROM t_student WHERE name = #{name}
+    </select>
+    <select id="selectByBirth" resultType="Student">
+        SELECT * FROM t_student WHERE birth = #{birth}
+    </select>
+    <select id="selectBySex" resultType="Student">
+        SELECT * FROM t_student WHERE sex = #{sex}
+    </select>
+    <select id="selectByNameAndSex" resultType="Student">
+        SELECT * FROM t_student WHERE name = #{name} AND sex = #{sex}
+    </select>
+    <insert id="insert">
+        INSERT INTO t_student (id, name, age, height, birth, sex)
+        VALUES (#{id}, #{name}, #{age}, #{height}, #{birth}, #{sex})
+    </insert>
+    <select id="selectByNameAndAge" resultType="Student">
+        # 传值时要使用 arg0、arg1 或者 param1、param2
+        SELECT * FROM t_student WHERE name = #{arg0} AND age = #{arg1}
+    </select>
+    <select id="selectByNameAndAgeUsingParamAnnotation" resultType="Student">
+        # 使用了@Param注解之后，arg0、arg1失效了，但是param1、param2还能用
+        SELECT  * FROM t_student WHERE name = #{name} AND age = #{age}
+    </select>
+</mapper>

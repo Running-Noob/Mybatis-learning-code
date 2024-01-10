@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/mybatis-004-web/pom.xml" />
         <option value="$PROJECT_DIR$/javassist-test/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-005-interface-crud/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-006-trick/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-007-param/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
