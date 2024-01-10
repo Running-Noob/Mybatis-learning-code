@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.f.mybatis.mapper.CarMapper">
+    <select id="selectById" resultType="Car">
+        SELECT id,
+               car_num      AS carNum,
+               brand,
+               guide_price  AS guidePrice,
+               produce_time AS produceTime,
+               car_type     AS carType
+        FROM t_car
+        WHERE id = #{id}
+    </select>
+    <select id="selectAll" resultType="Car">
+        SELECT id,
+               car_num      AS carNum,
+               brand,
+               guide_price  AS guidePrice,
+               produce_time AS produceTime,
+               car_type     AS carType
+        FROM t_car
+    </select>
+    <select id="selectByIdReturnMap" resultType="map">
+        SELECT id,
+               car_num      AS carNum,
+               brand,
+               guide_price  AS guidePrice,
+               produce_time AS produceTime,
+               car_type     AS carType
+        FROM t_car
+        WHERE id = #{id}
+    </select>
+    <select id="selectAllReturnListMap" resultType="map">
+        SELECT id,
+               car_num      AS carNum,
+               brand,
+               guide_price  AS guidePrice,
+               produce_time AS produceTime,
+               car_type     AS carType
+        FROM t_car
+    </select>
+    <select id="selectAllReturnBigMap" resultType="map">
+        SELECT id,
+               car_num      AS carNum,
+               brand,
+               guide_price  AS guidePrice,
+               produce_time AS produceTime,
+               car_type     AS carType
+        FROM t_car
+    </select>
+    <!-- 专门定义一个结果映射，在这个结果映射当中指定数据库表的字段名和Java类的属性名的对应关系 -->
+    <!--
+        1.type属性：用来指定POJO类的类名，全限定名称应该是com.f.mybatis.pojo.Car，
+            但是因为在mybatis-config.xml中设置了typeAliases中的包名，所以可以直接用Car(不区分大小写)
+        2.id属性：指定resultMap的唯一标识，这个id将来要在select标签中使用
+    -->
+    <resultMap id="carResultMap" type="Car">
+        <!-- 如果数据库表中有主键，建议这里配置一个id标签，
+            这样的配置可以让mybatis提高效率-->
+        <id property="id" column="id"/>
+        <!-- property后面填写POJO类的属性名 -->
+        <!-- column后面填写数据库表的字段名 -->
+        <result property="carNum" column="car_num"/>
+        <!-- <result property="brand" column="brand"/>
+            如果property和column的名字一样，就可以省略-->
+        <result property="guidePrice" column="guide_price"/>
+        <result property="produceTime" column="produce_time"/>
+        <result property="carType" column="car_type"/>
+    </resultMap>
+    <!-- select标签的resultMap属性，用来指定使用哪个结果映射。
+        resultMap后面的值是定义的resultMap的id -->
+    <select id="selectAllByResultMap" resultMap="carResultMap">
+        SELECT * FROM t_car
+    </select>
+    <select id="selectAllByMapUnderscoreToCamelCase" resultType="Car">
+        SELECT * FROM t_car
+    </select>
+</mapper>
