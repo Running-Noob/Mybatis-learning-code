@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.f.mybatis.mapper.CarMapper">
+    <select id="selectByMultiCondition" resultType="Car">
+        SELECT *
+        FROM t_car
+        WHERE 1 = 1 # 1 = 1是为了避免下面三个test都为false的情况
+        <!--
+            1.if标签中的test属性是必须的
+            2，if标签中test属性的值是true或者false
+            3.如果test是true，则if标签中的sql内容就会拼接，反正则不会拼接。
+            4.test中可以使用的是：
+                多参数：当使用了@Param注解，那么test中要出现的就是@Param注解指定的参数名，例如@Param("brand")，那么这里只能使用brand
+                多参数：当没有使用@Param注解，那么test中要出现的是：param1、param2、param3... arg0、arg1、arg2...
+                单参数：当使用了POJO，那么test中要出现的就是POJO类的属性名
+            5.在mybatis的动态sql的test表达式中，不能使用&&，只能使用and
+        -->
+        <if test="brand != null and brand != ''">
+            AND brand like "%"#{brand}"%"
+        </if>
+        <if test="guidePrice != null and guidePrice != ''">
+            AND guide_price > #{guidePrice}
+        </if>
+        <if test="carType != null and carType != ''">
+            AND car_type = #{carType}
+        </if>
+    </select>
+    <select id="selectByMultiConditionWithWhere" resultType="Car">
+        SELECT * FROM t_car
+        /*where标签是专门负责where子句动态生成的*/
+        <where>
+            <if test="brand != null and brand != ''">
+                AND brand like "%"#{brand}"%"
+            </if>
+            <if test="guidePrice != null and guidePrice != ''">
+                AND guide_price > #{guidePrice}
+            </if>
+            <if test="carType != null and carType != ''">
+                AND car_type = #{carType}
+            </if>
+        </where>
+    </select>
+    <select id="selectByMultiConditionWithTrim" resultType="Car">
+        SELECT * FROM t_car
+        <!--
+            prefix: 加前缀
+            prefixOverrides: 删除前缀
+            suffix: 加后缀
+            suffixOverrides: 删除后缀
+            <trim prefix="" prefixOverrides="" suffix="" suffixOverrides=""></trim>
+        -->
+        <!--prefix="where" 是在trim标签所有内容的前面添加 where-->
+        <!--suffixOverrides="and|or" 是把trim标签中内容的后缀and或or去掉-->
+        <trim prefix="where" suffixOverrides="and|or">
+            <if test="brand != null and brand != ''">
+                brand like "%"#{brand}"%" and
+            </if>
+            <if test="guidePrice != null and guidePrice != ''">
+                guide_price >= #{guidePrice} and
+            </if>
+            <if test="carType != null and carType != ''">
+                car_type = #{carType}
+            </if>
+        </trim>
+    </select>
+    <update id="updateBySet">
+        UPDATE t_car
+        <set>
+            <if test="carNum != null and carNum != ''">car_num = #{carNum},</if>
+            <if test="brand != null and brand != ''">brand = #{brand},</if>
+            <if test="guidePrice != null and guidePrice != ''">guide_price = #{guidePrice},</if>
+            <if test="produceTime != null and produceTime != ''">produce_time = #{produceTime},</if>
+            <if test="carType != null and carType != ''">car_type = #{carType},</if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+    <select id="selectByChoose" resultType="Car">
+        SELECT * FROM t_car
+        <where>
+            <choose>
+                <when test="brand != null and brand != ''">brand = #{brand}</when>
+                <when test="guidePrice != null and guidePrice != ''">guide_price > #{guidePrice}</when>
+                <otherwise>car_type = #{carType}</otherwise>
+            </choose>
+        </where>
+    </select>
+    <delete id="deleteByIds">
+        DELETE FROM t_car
+        WHERE id in
+        <!--
+            foreach标签的属性：
+                collection：指定数组或者集合
+                item：代表数组或集合中的元素
+                separator：循环之间的分隔符
+                open: foreach循环拼接的所有sql语句的最前面以什么开始。
+                close: foreach循环拼接的所有sql语句的最后面以什么结束。
+        -->
+        <!--
+            当没有@Param("ids")时，collection="ids" 报错，报错信息是
+            Parameter 'ids' not found. Available parameters are [array, arg0]
+            说明mybatis存数组的时候，默认是
+                map.put("array", 数组);
+                map.put("arg0", 数组);
+        -->
+        <foreach collection="ids" item="aaaaa" separator="," open="(" close=")">
+            #{aaaaa}
+        </foreach>
+    </delete>
+    <insert id="insertCars">
+        INSERT INTO t_car
+        VALUES
+        <foreach collection="cars" item="car" separator=",">
+            (null, #{car.carNum}, #{car.brand}, #{car.guidePrice}, #{car.produceTime}, #{car.carType})
+        </foreach>
+    </insert>
+</mapper>
