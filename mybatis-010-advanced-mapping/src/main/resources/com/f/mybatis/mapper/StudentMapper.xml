@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.f.mybatis.mapper.StudentMapper">
+    <!--多对一映射的第一种方式：一条SQL语句，级联属性映射-->
+    <resultMap id="studentResultMap" type="Student">
+        <id property="sid" column="sid"/>
+        <result property="sname" column="sname"/>
+        <result property="clazz.cid" column="cid"/>
+        <result property="clazz.cname" column="cname"/>
+    </resultMap>
+    <select id="selectById" resultMap="studentResultMap">
+        SELECT
+        s.sid, s.sname, c.cid, c.cname
+        FROM
+        t_stu s, t_clazz c
+        <where>
+            s.sid = #{sid} AND s.cid = c.cid
+        </where>
+    </select>
+
+    <!--多对一映射的第二种方式：一条SQL语句，association标签-->
+    <resultMap id="studentResultMapAssociation" type="Student">
+        <id property="sid" column="sid"/>
+        <result property="sname" column="sname"/>
+        <!--
+            association翻译为关联。一个Student对象关联一个Clazz对象
+                property：提供要映射的POJO类的属性名
+                javaType：用来指定要映射的java类型
+            下面表示要映射Student类中的clazz属性，要将该属性映射为Clazz类
+        -->
+        <association property="clazz" javaType="Clazz">
+            <id property="cid" column="cid"/>
+            <result property="cname" column="cname"/>
+        </association>
+    </resultMap>
+    <select id="selectByIdAssociation" resultMap="studentResultMapAssociation">
+        SELECT
+        s.sid, s.sname, c.cid, c.cname
+        FROM
+        t_stu s, t_clazz c
+        <where>
+            s.sid = #{sid} AND s.cid = c.cid
+        </where>
+    </select>
+
+    <!--两条SQL语句，完成多对一的分布查询-->
+    <!--这里是第一步，根据学生的id查询学生的所有信息，这些信息中含有班级的id（cid）-->
+    <resultMap id="studentResultMapByStep" type="Student">
+        <id property="sid" column="sid"/>
+        <result property="sname" column="sname"/>
+        <!--
+            select里面指定另外第二步SQL语句的sqlId(namespace+id)
+            column里面指定传给第二步SQL语句的参数（是第一步SQL语句查询结果里面的）
+            fetchType="lazy"表示开启延迟加载（懒加载）
+        -->
+        <association property="clazz"
+                     select="com.f.mybatis.mapper.ClazzMapper.selectByIdStep2"
+                     column="cid"
+                     fetchType="lazy"/>
+    </resultMap>
+    <select id="selectByIdStep1" resultMap="studentResultMapByStep">
+        SELECT sid, sname, cid
+        FROM t_stu
+        <where>
+            sid = #{sid}
+        </where>
+    </select>
+
+    <select id="selectByIdStep2" resultType="Student">
+        SELECT sid, sname
+        FROM t_stu
+        <where>
+            cid = #{cid}
+        </where>
+    </select>
+</mapper>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.f.mybatis.mapper.ClazzMapper">
+    <select id="selectByIdStep2" resultType="Clazz">
+        SELECT cid, cname
+        FROM t_clazz
+        <where>
+            cid = #{cid}
+        </where>
+    </select>
+
+    <resultMap id="clazzResultMap" type="Clazz">
+        <id property="cid" column="cid"/>
+        <result property="cname" column="cname"/>
+        <!--一对多，使用collection，collection是集合的意思-->
+        <!--ofType属性用来指定集合中的元素类型-->
+        <collection property="students" ofType="Student">
+            <id property="sid" column="sid"/>
+            <result property="sname" column="sname"/>
+        </collection>
+    </resultMap>
+    <select id="selectByIdCollection" resultMap="clazzResultMap">
+        SELECT c.cid, c.cname, s.sid, s.sname
+        FROM t_clazz c, t_stu s
+        <where>
+            c.cid = s.cid AND c.cid = #{cid}
+        </where>
+    </select>
+
+    <resultMap id="clazzResultMapByStep" type="Clazz">
+        <id property="cid" column="cid"/>
+        <result property="cname" column="cname"/>
+        <collection property="students"
+                    select="com.f.mybatis.mapper.StudentMapper.selectByIdStep2"
+                    column="cid"/>
+    </resultMap>
+    <select id="selectByIdStep1" resultMap="clazzResultMapByStep">
+        SELECT cid, cname
+        FROM t_clazz
+        <where>
+            cid = #{cid}
+        </where>
+    </select>
+</mapper>

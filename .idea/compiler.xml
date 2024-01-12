@@ -15,6 +15,7 @@
         <module name="mybatis-005-interface-crud" />
         <module name="mybatis-006-trick" />
         <module name="mybatis-002-crud" />
+        <module name="mybatis-010-advanced-mapping" />
         <module name="mybatis-003-configuration" />
         <module name="godbatis-test" />
       </profile>
