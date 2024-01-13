@@ -22,8 +22,8 @@
         <option value="Jsp File" />
         <option value="mybatis-config" />
         <option value="Mybatis-SqlMapper" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -61,7 +61,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Running Noob/Code Project/Mybatis-learning-code/mybatis-013-page/src/test/java",
+    "last_opened_file_path": "C:/Users/Running Noob/Code Project/Mybatis-learning-code/mybatis-014-annotation/src/test/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,11 +76,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-014-annotation\src\test\java" />
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-014-annotation\src\main\java" />
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-014-annotation\src\main\resources" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-013-page\src\test\java" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-013-page\src\main\java" />
-      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-013-page\src\main\resources" />
-      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-012-generator\src\main\resources" />
-      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-011-cache\src\test\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Running Noob\Code Project\mybatis_learning_code\mybatis-001-introduction\src\main\resources\x\y" />
@@ -94,9 +94,9 @@
       <recent name="com.f.bank.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CarMapperTest.testSelectAllByPageHelperAndPageInfo">
-    <configuration name="CarMapperTest.testSelectAllByPageHelper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis-013-page" />
+  <component name="RunManager" selected="JUnit.CarMapperTest.testSelectById">
+    <configuration name="CarMapperTest.testDeleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-014-annotation" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.f.mybatis.test.*" />
@@ -105,7 +105,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
       <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
-      <option name="METHOD_NAME" value="testSelectAllByPageHelper" />
+      <option name="METHOD_NAME" value="testDeleteById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarMapperTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-014-annotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
+      <option name="METHOD_NAME" value="testInsert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,7 +144,7 @@
       </method>
     </configuration>
     <configuration name="CarMapperTest.testSelectById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis-011-cache" />
+      <module name="mybatis-014-annotation" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.f.mybatis.test.*" />
@@ -143,8 +159,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CarMapperTest.testSelectById2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis-011-cache" />
+    <configuration name="CarMapperTest.testUpdateById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-014-annotation" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.f.mybatis.test.*" />
@@ -153,23 +169,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
       <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
-      <option name="METHOD_NAME" value="testSelectById2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarMapperTest.testSelectByPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis-013-page" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.f.mybatis.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
-      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
-      <option name="METHOD_NAME" value="testSelectByPage" />
+      <option name="METHOD_NAME" value="testUpdateById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -265,11 +265,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CarMapperTest.testSelectAllByPageHelperAndPageInfo" />
-        <item itemvalue="JUnit.CarMapperTest.testSelectAllByPageHelper" />
-        <item itemvalue="JUnit.CarMapperTest.testSelectByPage" />
-        <item itemvalue="JUnit.CarMapperTest.testSelectById2" />
         <item itemvalue="JUnit.CarMapperTest.testSelectById" />
+        <item itemvalue="JUnit.CarMapperTest.testUpdateById" />
+        <item itemvalue="JUnit.CarMapperTest.testDeleteById" />
+        <item itemvalue="JUnit.CarMapperTest.testInsert" />
+        <item itemvalue="JUnit.CarMapperTest.testSelectAllByPageHelperAndPageInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +311,7 @@
       <workItem from="1705034739698" duration="3867000" />
       <workItem from="1705039645427" duration="835000" />
       <workItem from="1705121725999" duration="4549000" />
-      <workItem from="1705130220149" duration="6456000" />
+      <workItem from="1705130220149" duration="8618000" />
     </task>
     <servers />
   </component>
