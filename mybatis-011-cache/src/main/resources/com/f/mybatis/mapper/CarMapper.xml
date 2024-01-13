@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.f.mybatis.mapper.CarMapper">
+    <!--
+        在对应的SqlMapper.xml文件中添加下面的标签<cache/>，
+        来表示要使用二级缓存
+    -->
+    <!--<cache/>-->
+
+    <!--集成ehcache组件-->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+    <select id="selectById" resultType="Car">
+        SELECT *
+        FROM t_car
+        <where>
+            id = #{id}
+        </where>
+    </select>
+    <select id="selectById2" resultType="Car">
+        SELECT *
+        FROM t_car
+        <where>
+            id = #{id}
+        </where>
+    </select>
+</mapper>

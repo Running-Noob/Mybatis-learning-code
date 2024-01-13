@@ -21,9 +21,9 @@
         <option value="HTML File" />
         <option value="Jsp File" />
         <option value="mybatis-config" />
-        <option value="Interface" />
-        <option value="Mybatis-SqlMapper" />
         <option value="Class" />
+        <option value="Mybatis-SqlMapper" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,34 +53,34 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Running Noob/Code Project/Mybatis-learning-code/mybatis-010-advanced-mapping/src/test/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Running Noob/Code Project/Mybatis-learning-code/mybatis-011-cache/src/test/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-011-cache\src\test\java" />
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-011-cache\src\main\java" />
+      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-011-cache\src\main\resources" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-010-advanced-mapping\src\test\java" />
       <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-010-advanced-mapping\src\main\java" />
-      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-010-advanced-mapping\src\main\resources" />
-      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-009-dynamic-sql\src\test\java" />
-      <recent name="C:\Users\Running Noob\Code Project\Mybatis-learning-code\mybatis-009-dynamic-sql\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Running Noob\Code Project\mybatis_learning_code\mybatis-001-introduction\src\main\resources\x\y" />
@@ -94,7 +94,39 @@
       <recent name="com.f.bank.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClazzMapperTest.testSelectByIdStep1">
+  <component name="RunManager" selected="JUnit.CarMapperTest.testSelectById2">
+    <configuration name="CarMapperTest.testSelectById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-011-cache" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
+      <option name="METHOD_NAME" value="testSelectById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarMapperTest.testSelectById2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-011-cache" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.f.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.CarMapperTest" />
+      <option name="METHOD_NAME" value="testSelectById2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClazzMapperTest.testSelectByIdCollection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis-010-advanced-mapping" />
       <extension name="coverage">
@@ -127,22 +159,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentMapperTest.testSelectById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis-010-advanced-mapping" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.f.mybatis.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
-      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.StudentMapperTest" />
-      <option name="METHOD_NAME" value="testSelectById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StudentMapperTest.testSelectByIdAssociation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis-010-advanced-mapping" />
       <extension name="coverage">
@@ -154,22 +170,6 @@
       <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
       <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.StudentMapperTest" />
       <option name="METHOD_NAME" value="testSelectByIdAssociation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentMapperTest.testSelectByIdStep1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis-010-advanced-mapping" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.f.mybatis.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.f.mybatis.test" />
-      <option name="MAIN_CLASS_NAME" value="com.f.mybatis.test.StudentMapperTest" />
-      <option name="METHOD_NAME" value="testSelectByIdStep1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -265,11 +265,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CarMapperTest.testSelectById2" />
+        <item itemvalue="JUnit.CarMapperTest.testSelectById" />
         <item itemvalue="JUnit.ClazzMapperTest.testSelectByIdStep1" />
         <item itemvalue="JUnit.ClazzMapperTest.testSelectByIdCollection" />
         <item itemvalue="JUnit.StudentMapperTest.testSelectByIdAssociation" />
-        <item itemvalue="JUnit.StudentMapperTest.testSelectByIdStep1" />
-        <item itemvalue="JUnit.StudentMapperTest.testSelectById" />
       </list>
     </recent_temporary>
   </component>
@@ -309,6 +309,8 @@
       <workItem from="1704884555858" duration="3721000" />
       <workItem from="1704954124087" duration="16500000" />
       <workItem from="1705034739698" duration="3867000" />
+      <workItem from="1705039645427" duration="835000" />
+      <workItem from="1705121725999" duration="4549000" />
     </task>
     <servers />
   </component>
